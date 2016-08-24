@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ebola</title>
+
+        <style>
+            #header {
+                font-size: 100px;
+                color: orange;
+                background-color: red;
+
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 id="header" onclick="changeContent()"> Hello World </h1>
+        <p>Simple subtitle goes here</p>
+
+        <ul>
+        <li>first</li>
+        <li>second</li>
+        </ul>
+
+        <script>
+            console.log("This printed");
+            console.log(window.Width);
+            console.log(window.Height);
+
+            function changeContent() {
+                for(var i = 0; i < 10; i++) {
+                    console.log(i);
+                    var list = document.createElement("LI");
+                    var node = document.createTextNode(i);
+                    list.appendChild(node);
+                    document.getElementById("header").appendChild(list);
+                }
+
+            }
+        </script>
+    </body>
+</html>
